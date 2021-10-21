@@ -64,7 +64,8 @@ public class OkHttpUtils {
             logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
             OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
-            clientBuilder.cookieJar(cookieJar);
+            // 禁用cookie
+            // clientBuilder.cookieJar(cookieJar);
 
             SSLHelper sslHelper = new SSLHelper();
             clientBuilder.sslSocketFactory(sslHelper.provideSSLSocketFactory(), sslHelper.provideX509TrustManager()).addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC));
