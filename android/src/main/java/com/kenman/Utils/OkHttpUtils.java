@@ -66,7 +66,7 @@ public class OkHttpUtils {
 
             OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
             // cookie
-            if (options.getString(ALLOW_COOKIE) && options.getBoolean(ALLOW_COOKIE)) {
+            if (options.hasKey(ALLOW_COOKIE) && options.getBoolean(ALLOW_COOKIE)) {
                 clientBuilder.cookieJar(cookieJar);
             }
 
