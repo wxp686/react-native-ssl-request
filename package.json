@@ -1,7 +1,7 @@
 {
   "name": "react-native-ssl-request",
   "title": "React Native Ssl Request",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ssl authentication",
   "main": "./index.js",
   "types": "./index.d.ts",
