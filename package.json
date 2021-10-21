@@ -1,0 +1,39 @@
+{
+  "name": "react-native-ssl-request",
+  "title": "React Native Ssl Request",
+  "version": "1.0.0",
+  "description": "ssl authentication",
+  "main": "index.js",
+  "files": [
+    "README.md",
+    "android",
+    "index.js",
+    "ios",
+    "react-native-ssl-request.podspec"
+  ],
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxp686/react-native-ssl-request.git",
+    "baseUrl": "https://github.com/wxp686/react-native-ssl-request"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "wxp",
+    "email": "15803305146@163.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}
