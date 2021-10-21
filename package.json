@@ -3,15 +3,16 @@
   "title": "React Native Ssl Request",
   "version": "1.0.4",
   "description": "ssl authentication",
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "files": [
     "README.md",
     "android",
     "index.js",
+    "index.d.ts",
     "ios",
     "react-native-ssl-request.podspec"
   ],
-  "types": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
