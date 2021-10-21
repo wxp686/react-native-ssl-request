@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 import Q from 'q'
 
-const { RNSslPinning } = NativeModules;
+const { SslRequest } = NativeModules;
 
 const fetch = (url, obj, callback) => {
   let deferred = Q.defer();
@@ -15,7 +15,7 @@ const fetch = (url, obj, callback) => {
   }
 
 
-  RNSslPinning.fetch(url, obj, (err, res) => {
+  SslRequest.fetch(url, obj, (err, res) => {
     if (err && typeof err != 'object') {
       deferred.reject(err);
     }
@@ -54,7 +54,7 @@ const fetch = (url, obj, callback) => {
 
 const getCookies = (domain) => {
   if (domain) {
-    return RNSslPinning.getCookies(domain);
+    return SslRequest.getCookies(domain);
   }
 
   return Promise.reject("Domain cannot be empty")
@@ -62,7 +62,7 @@ const getCookies = (domain) => {
 
 const removeCookieByName = (name) => {
   if (name) {
-    return RNSslPinning.removeCookieByName(name);
+    return SslRequest.removeCookieByName(name);
   }
 
   return Promise.reject("Cookie Name cannot be empty")
