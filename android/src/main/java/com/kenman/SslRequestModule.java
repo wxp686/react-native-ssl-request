@@ -40,7 +40,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class RNSslPinningModule extends ReactContextBaseJavaModule {
+public class SslRequestModule extends ReactContextBaseJavaModule {
 
 
     private static final String OPT_SSL_PINNING_KEY = "sslPinning";
@@ -53,7 +53,7 @@ public class RNSslPinningModule extends ReactContextBaseJavaModule {
     private ForwardingCookieHandler cookieHandler;
     private OkHttpClient client;
 
-    public RNSslPinningModule(ReactApplicationContext reactContext) {
+    public SslRequestModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
         cookieStore = new HashMap<>();
