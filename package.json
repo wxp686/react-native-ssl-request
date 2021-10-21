@@ -1,7 +1,7 @@
 {
   "name": "react-native-ssl-request",
   "title": "React Native Ssl Request",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ssl authentication",
   "main": "index.js",
   "files": [
@@ -21,7 +21,8 @@
     "baseUrl": "https://github.com/wxp686/react-native-ssl-request"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ssl"
   ],
   "author": {
     "name": "wxp",
@@ -30,9 +31,6 @@
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
-  "peerDependencies": {
-    "react-native": "^0.41.2"
-  },
   "dependencies": {
     "q": "^1.4.1"
   }
