@@ -13,6 +13,7 @@ export namespace ReactNativeSSLRequest {
         headers?: Header;
         method?: 'DELETE' | 'GET' | 'POST' | 'PUT',
         timeoutInterval?: number,
+        allowCookie?: boolean
     }
 
     interface Response {

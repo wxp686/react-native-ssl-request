@@ -47,6 +47,7 @@ public class OkHttpUtils {
     private static final String BODY_KEY = "body";
     private static final String METHOD_KEY = "method";
     private static final String FILE = "file";
+    private static final String ALLOW_COOKIE = "allowCookie";
     private static final HashMap<String, OkHttpClient> clientsByDomain = new HashMap<>();
     private static OkHttpClient defaultClient = null;
     //    private static OkHttpClient client = null;
@@ -64,8 +65,10 @@ public class OkHttpUtils {
             logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
             OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();
-            // 禁用cookie
-            // clientBuilder.cookieJar(cookieJar);
+            // cookie
+            if (options.getString(ALLOW_COOKIE) && options.getBoolean(ALLOW_COOKIE)) {
+                clientBuilder.cookieJar(cookieJar);
+            }
 
             SSLHelper sslHelper = new SSLHelper();
             clientBuilder.sslSocketFactory(sslHelper.provideSSLSocketFactory(), sslHelper.provideX509TrustManager()).addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC));
