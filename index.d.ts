@@ -1,4 +1,4 @@
-export namespace ReactNativeSSLPinning {
+export namespace ReactNativeSSLRequest {
     interface Cookies {
         [cookieName: string]: string;
     }
@@ -25,6 +25,6 @@ export namespace ReactNativeSSLPinning {
     }
 }
 
-export declare function fetch(url: string, options: ReactNativeSSLPinning.Options): Promise<ReactNativeSSLPinning.Response>;
-export declare function getCookies(domain: string): Promise<ReactNativeSSLPinning.Cookies>;
+export declare function fetch(url: string, options: ReactNativeSSLRequest.Options): Promise<ReactNativeSSLRequest.Response>;
+export declare function getCookies(domain: string): Promise<ReactNativeSSLRequest.Cookies>;
 export declare function removeCookieByName(cookieName: string): Promise<void>;
