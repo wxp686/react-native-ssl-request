@@ -69,9 +69,9 @@ public class OkHttpUtils {
             if (options.hasKey(ALLOW_COOKIE) && options.getBoolean(ALLOW_COOKIE)) {
                 clientBuilder.cookieJar(cookieJar);
             }
-
+            //, sslHelper.provideX509TrustManager() 客户端验证服务端
             SSLHelper sslHelper = new SSLHelper();
-            clientBuilder.sslSocketFactory(sslHelper.provideSSLSocketFactory(), sslHelper.provideX509TrustManager()).addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC));
+            clientBuilder.sslSocketFactory(sslHelper.provideSSLSocketFactory()).addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC));
 
             client = clientBuilder
                     .build();
